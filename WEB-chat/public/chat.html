@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>chatRoom</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet"  type="text/css" href="./css/iconfont.css"> -->
+        <link rel="stylesheet"  type="text/css" href="./css/style.css">
+    </head>
+    <body>
+				<!--聊天盒子-->
+        <div class="chatBox">
+						<div class="chatBox-list">
+							<h2>所有用户</h2>
+							<ul id="chatList">
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶齐云飞</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+								<li>
+										<div>
+											<img src="image/node.png">
+											<span>来自垃圾桶</span>
+										</div>
+								</li>
+							</ul>
+						</div>
+						<div class="chatBox-username">
+							<div>
+								<img src="image/node.png" alt="" />
+							</div>
+							<p>名字: <span>齐云飞</span></p>
+							<div>聊天室人数:<span>5人</span><span></span></div>
+							<p>项目介绍:</p>	
+							<ul>
+								<li>在在线聊天室</li>
+								<li>项目地址</li>
+								<li></li>
+							</ul>
+						</div>
+            <div class="chatBox-title">
+                <div class="chatBox-info">
+                    <h3 class="chatBox-info-name">nodejs--chatRoom</h3>
+                </div>
+                <div class="chatBox-switch">
+                    <i class="iconfont icon-zuixiaohua" title="最小化"></i>
+                    <i class="iconfont icon-fullscreen" title="全屏"></i>
+                    <i class="iconfont icon-close" title="关闭"></i>
+                </div>
+            </div>
+            <div class="chatBox-content">
+                <div class="chatBox-content-main">
+                    <ul class="chatBox-ul">
+                        <li>
+                            <div class="chatRoom-user">
+                                <img src="image/node.png">
+                                <cite>来自垃圾桶<i>2017-03-23 15:40:16</i></cite>
+                            </div>
+                            <div class="chatRoom-user-text">您好，我现在有事不在，一会再和您联系。</div>
+                        </li>
+                        <li class="chatRoom-me">
+                            <div class="chatRoom-user">
+                                <img src="image/me.jpg">
+                                <cite><i>2017-03-23 15:42:16</i>萌狗DB</cite>
+                            </div>
+                            <div class="chatRoom-user-text">我是你的好基友</div>
+                        </li>
+                        <li class="chatRoom-notice">分发发 加入聊天室</li>
+												<li>
+                            <div class="chatRoom-user">
+                                <img src="image/node.png">
+                                <cite>来自垃圾桶<i>2017-03-23 15:40:16</i></cite>
+                            </div>
+                            <div class="chatRoom-user-text">您好，我现在有事不在，一会再和您联系。</div>
+                        </li>
+                        <li class="chatRoom-me">
+                            <div class="chatRoom-user">
+                                <img src="image/me.jpg">
+                                <cite><i>2017-03-23 15:42:16</i>萌狗DB</cite>
+                            </div>
+                            <div class="chatRoom-user-text">我是你的好基友</div>
+                        </li>
+                        <li class="chatRoom-notice">分发发 加入聊天室</li>
+                    </ul>
+                </div>
+                <div class="chatBox-content-footer">
+                    <div class="chatBox-toolbar">
+                        <span class="chatBox-icon iconfont icon-zitiyanse" title="字体"></span>
+                        <span class="chatBox-icon iconfont icon-xiaolian" title="表情"></span>
+                    </div>
+                    <div class="chatBox-textarea">
+                        <textarea class="textarea"></textarea>
+                    </div>
+                    <div class="chatBox-bottom">
+                        <div class="chatBox-btn">
+                            <span class="chatBox-btn-close">关闭</span>
+                            <span class="chatBox-btn-send">发送</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			//document.getElementById("panel").scrollTop = tableHeight;
+			//$('.chatBox-list ul').prop('scrollTop',document.getElementById(".chatBox-list li").scrollHeight);
+			//$('.chatBox-list ul').scrollTo('100%');
+			//document.getElementById("chatList").scrollTop = tableHeight;
+			//成功
+			//var scrollDom = document.getElementById('chatList');
+			//console.log(scrollDom);
+			//scrollDom.scrollTop = scrollDom.scrollHeight;
+			//console.log(scrollDom.scrollTop,scrollDom.scrollHeight);
+			($('.chatBox-ul').children("li:last-child")[0]).scrollIntoView();
+
+
+			
+		</script>
+</html>

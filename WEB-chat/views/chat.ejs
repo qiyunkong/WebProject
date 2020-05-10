@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>chatRoom</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/css/barrager.css">
+		<link rel="stylesheet"  type="text/css" href="/css/style.css">
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_1332619_n3cko7poov.css">
+    </head>
+    <body>
+		<div class="site-welcome active" id="siteWelcome">
+			<div class="loading">
+	 
+			</div>
+		</div>	
+		<!--聊天盒子-->
+        <div class="chatBox">
+			<div style="left: 0;" class="chatBox-list">
+				<h2><span class="iconfont chat-chengyuan"></span>在线成员</h2>
+				<ul id="chatList">
+					<%for(var i = 0; i< alluser.length; i++){ %>
+					<li data_name="<%=alluser[i].userName%>">
+						<div>
+							<img src="<%=alluser[i].url%>">
+							<span><%=alluser[i].userName%></span>
+						</div>
+					</li>
+					<%}%>
+				</ul>
+			</div>
+			<div style="right:0;" class="chatBox-username">
+				<p><img id="userPic" src="<%=url %>" alt=""></p>
+				<p><span class="iconfont chat-yonghuming"></span>名称:<span id="user"><%=userName %></span></p>
+				<p><span class="iconfont chat-weibiaoti-_huabanfuben"></span>人数:<span id="num"><%=alluser.length%></span></p>
+			</div>
+            <div class="chatBox-title">
+                <div class="chatBox-info">
+                    <h3 class="chatBox-info-name">聊天室</h3>
+                </div>
+                <div class="chatBox-switch">
+                    <i id="infoSwitch" class="iconfont chat-geren12" title="个人信息"></i>
+                    <i id="memberSwitch" class="iconfont chat-banjichengyuan" title="成员"></i>
+                    <i id="outSwitch" class="iconfont chat-tuichu" title="关闭"></i>
+                </div>
+            </div>
+            <div class="chatBox-content">
+                <div class="chatBox-content-main">
+                    <ul class="chatBox-ul">
+						<%if(allContent.length){%>
+							<% for(var j = 0; j< allContent.length; j++){ %>
+								<li>
+									<div class="chatRoom-user">
+										<img src="<%=allContent[j].url%>">
+										<cite><%=allContent[j].user%><i><%=allContent[j].time%></i></cite>
+									</div>
+									<div class="chatRoom-user-text"><%=allContent[j].content%></div>
+								</li>
+							<% }%>
+							<li class="chatRoom-notice">--以上为历史记录--</li> 
+						<%}else{%>
+							<li class="chatRoom-notice">欢迎您体验我的项目</li> 
+						<%}%>
+                    </ul>
+                </div>
+                <div class="chatBox-content-footer">
+                    <div class="chatBox-toolbar">
+                        <span id="bullet-open" class="chatBox-icon iconfont chat-bofangqi-danmukai" title="关闭弹幕"></span>
+                    </div>
+                    <div class="chatBox-textarea">
+                        <textarea id="textarea" class="textarea"></textarea>
+                    </div>
+                    <div class="chatBox-bottom">
+                        <div class="chatBox-btn">
+                            <span class="chatBox-btn-close">清空</span>
+                            <span id="btnSend" class="chatBox-btn-send">发送</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<script>
+			//当代码加载到这里的时候,执行这个script,当代码加载到这里,说明loading该结束了
+			 window.onload=function(){
+				 var siteWelcome = document.getElementById('siteWelcome');
+				 siteWelcome.classList.remove('active');
+			 }
+		 </script>
+	</body>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/jquery.barrager.min.js"></script>
+		<script type="text/javascript" src="/js/chat2.js"></script>
+</html>

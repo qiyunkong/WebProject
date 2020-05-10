@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>chatRoom--登录页</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/css/Login.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row" style="margin-top:200px">
+                 <div class="col-md-offset-4 col-md-4">
+                     <h2 class="text-primary chatTitle">ChatRoom-html</h2>
+                     <div class="form-horizontal chatForm">
+                        <div class="form-group">
+                            <label for="userName">用户名</label>
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="用户名">
+                        </div>
+                        <div class="form-group">
+                            <a type="button" class="btn btn-primary btn-block" id="login">点击进入</a>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+		<div id="modal" class="modal">
+			<img id="pic" src="/image/error.png" alt="" />
+			<span id="msg"></span>
+		</div>
+    </body>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script src="/js/jquery.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="/js/login2.js"></script>
+</html>
